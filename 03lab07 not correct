@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    
+    int N, A;
+    float x;
+    
+    printf("Input Your Number: \n");
+    scanf("%d", &N);
+    
+    printf("Input Your Age: \n");
+    scanf("%d", &A);
+
+    float a = ((-1) * (float)A);
+    x = a / (float)N;
+
+    if (x < -100 || x > 100){
+      printf("Try different numbers");
+      return 0;
+    }
+    
+    printf("Your result = ");
+    printf("%f", x);
+    
+    
+    return 0;
+}
