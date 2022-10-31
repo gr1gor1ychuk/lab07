@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int calculateSum(int fromNum, int toNum);
+
+int main() {
+    int fromNum;
+    int toNum;
+    int result;
+
+    printf(" \n");
+    printf("Input first number = ");
+    scanf("%d", &fromNum);
+
+    printf("Input last number = ");
+    scanf("%d", &toNum);
+
+    result = calculateSum(fromNum, toNum);
+    printf("\nResult from %d to %d = %d\n", fromNum, toNum, result);
+    printf(" \n");
+
+    return (0);
+}
+
+int calculateSum(int fromNum, int toNum) {
+    int res;
+    if (fromNum == toNum) {
+        return (fromNum);
+    }
+    else {
+        res = fromNum + calculateSum((fromNum + 1), toNum);
+    }
+    return (res);
+}
