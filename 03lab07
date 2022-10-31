@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+
+
+int main() {
+
+    int c = -100;
+    int d = 100;
+
+    int N, A;
+    float x;
+        
+    printf("\nInput Your Number: \n");
+    scanf("%d", &N);
+        
+    printf("Input Your Age: \n");
+    scanf("%d", &A);
+
+    if (A < 1 || A > 110 || N < 1 || N > 45){
+    printf("\nTry different numbers\n");
+    return 0;
+    }
+
+    float a = ((-1) * (float)A);
+    x = a / (float)N;
+
+    while (d - c / x)
+        {
+            float s = c + (d-c) / 2;
+            if (c * s < 0)
+                d = s;
+            else
+                c = s;
+            break;
+        }
+
+    if (x < -100 || x > 100){
+    printf("\nTry different numbers\n");
+    return 0;
+    }
+
+    printf("\nCorrect answer: X = %f\n", x);
+    printf("\nFinal Result: %d * %f + %d = 0\n", N, x, A);
+
+    return 0;
+}
